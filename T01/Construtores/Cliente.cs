@@ -18,6 +18,8 @@ namespace Construtores
         {
             this.Nome = nome;
         }
+        public Cliente()
+        { }
 
     }
 }
