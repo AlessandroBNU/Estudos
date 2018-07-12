@@ -13,6 +13,7 @@ namespace CaixaEletronico
         public Cliente Titular { get; set; }
         public double Saldo { get; private set; }
 
+
         public void Deposita(double valorASerDepositado)
         {
             if (valorASerDepositado > 0)
