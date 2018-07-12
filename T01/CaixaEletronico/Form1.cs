@@ -43,6 +43,20 @@ namespace CaixaEletronico
             textoNumero.Text = Convert.ToString(this.conta.Numero);
             textoSaldo.Text = Convert.ToString(this.conta.Saldo);
             textoTitular.Text = this.conta.Titular.Nome;
+
+            textoTitular.Text = conta.Titular.Nome;
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
+            textoNumero.Text = Convert.ToString(conta.Numero);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string textoDoValorDoSaque = textoValor.Text;
+            double valorSaque = Convert.ToDouble(textoDoValorDoSaque);
+            this.conta.Saca(valorSaque);
+
+            this.MostraConta();
+        }
+
     }
 }

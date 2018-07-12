@@ -21,6 +21,13 @@ namespace CaixaEletronico
                 this.Saldo += valorASerDepositado;
             }
         }
-        
+        public void Saca(double textoDoValorDoSaque)
+        {
+            if (textoDoValorDoSaque > 0)
+            {
+                this.Saldo -= textoDoValorDoSaque;
+            }
+        }
+
     }
 }
