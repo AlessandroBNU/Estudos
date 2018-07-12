@@ -23,7 +23,12 @@ namespace CaixaEletronico
             Conta conta = new Conta();
             conta.Titular = new Cliente ();
             conta.Titular.Nome = "Victor";
-            textoTitular.Text = conta.Titular.Nome; 
+            conta.Numero = 1;
+            conta.Deposita(250.0);
+
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
+            textoNumero.Text = Convert.ToString(conta.Numero);
+            textoTitular.Text = conta.Titular.Nome;
         }
     }
 }

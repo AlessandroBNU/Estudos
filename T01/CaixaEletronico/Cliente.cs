@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class Cliente
+   class Cliente
     {
         public string Nome { get; set; }
         public string rg;
@@ -26,8 +26,5 @@ namespace CaixaEletronico
             return this.idade >= 18;
         }
     }
-
-
-
 }
 

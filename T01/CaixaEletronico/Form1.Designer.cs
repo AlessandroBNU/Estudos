@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.textoTitular = new System.Windows.Forms.TextBox();
+            this.textoSaldo = new System.Windows.Forms.TextBox();
+            this.textoNumero = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -38,11 +40,27 @@
             this.textoTitular.Size = new System.Drawing.Size(100, 20);
             this.textoTitular.TabIndex = 0;
             // 
+            // textoSaldo
+            // 
+            this.textoSaldo.Location = new System.Drawing.Point(160, 211);
+            this.textoSaldo.Name = "textoSaldo";
+            this.textoSaldo.Size = new System.Drawing.Size(100, 20);
+            this.textoSaldo.TabIndex = 1;
+            // 
+            // textoNumero
+            // 
+            this.textoNumero.Location = new System.Drawing.Point(160, 265);
+            this.textoNumero.Name = "textoNumero";
+            this.textoNumero.Size = new System.Drawing.Size(100, 20);
+            this.textoNumero.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textoNumero);
+            this.Controls.Add(this.textoSaldo);
             this.Controls.Add(this.textoTitular);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -55,6 +73,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox textoTitular;
+        private System.Windows.Forms.TextBox textoSaldo;
+        private System.Windows.Forms.TextBox textoNumero;
     }
 }
 
