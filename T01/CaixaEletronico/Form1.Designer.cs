@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textoTitular = new System.Windows.Forms.TextBox();
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.textoNumero = new System.Windows.Forms.TextBox();
             this.textoValor = new System.Windows.Forms.TextBox();
@@ -39,14 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.textoTitular = new System.Windows.Forms.TextBox();
+            this.textoP = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // textoTitular
-            // 
-            this.textoTitular.Location = new System.Drawing.Point(144, 83);
-            this.textoTitular.Name = "textoTitular";
-            this.textoTitular.Size = new System.Drawing.Size(83, 20);
-            this.textoTitular.TabIndex = 0;
             // 
             // textoSaldo
             // 
@@ -121,25 +115,41 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(47, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Saldo";
+            this.label4.Text = "Saldo da Conta";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(98, 336);
+            this.button3.Location = new System.Drawing.Point(132, 367);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(129, 23);
             this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
+            this.button3.Text = "Saldo da Poupança";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textoTitular
+            // 
+            this.textoTitular.Location = new System.Drawing.Point(144, 90);
+            this.textoTitular.Name = "textoTitular";
+            this.textoTitular.Size = new System.Drawing.Size(83, 20);
+            this.textoTitular.TabIndex = 11;
+            // 
+            // textoP
+            // 
+            this.textoP.Location = new System.Drawing.Point(144, 319);
+            this.textoP.Name = "textoP";
+            this.textoP.Size = new System.Drawing.Size(100, 20);
+            this.textoP.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textoP);
+            this.Controls.Add(this.textoTitular);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -150,7 +160,6 @@
             this.Controls.Add(this.textoValor);
             this.Controls.Add(this.textoNumero);
             this.Controls.Add(this.textoSaldo);
-            this.Controls.Add(this.textoTitular);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -160,8 +169,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textoTitular;
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.TextBox textoNumero;
         private System.Windows.Forms.TextBox textoValor;
@@ -172,6 +179,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textoTitular;
+        private System.Windows.Forms.TextBox textoP;
     }
 }
 

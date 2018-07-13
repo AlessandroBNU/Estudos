@@ -32,11 +32,13 @@ namespace CaixaEletronico
           }
         private void button1_Click(object sender, EventArgs e)
         {
-            ContaPoupanca cp = new ContaPoupanca();
-            cp.Deposita(1000);
-            cp.Saca(100);
+            string textoDoValorDoDeposito = textoValor.Text;
+            double valorDeposito = Convert.ToDouble(textoDoValorDoDeposito);
+            this.conta.Deposita(valorDeposito);
 
-            MessageBox.Show("Saldo Poupanca" + cp.Saldo);
+            this.MostraConta();
+
+
         }
         private void MostraConta()
         {
@@ -60,11 +62,12 @@ namespace CaixaEletronico
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ContaPoupanca cp = new ContaPoupanca();
-            cp.Deposita(1000);
-            cp.Saca(100);
+            textoP.Text = Convert.ToString (conta.Saldo);
+        }
 
-            MessageBox.Show("Saldo Poupanca" + cp.Saldo);
+        private void textoTitular_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
