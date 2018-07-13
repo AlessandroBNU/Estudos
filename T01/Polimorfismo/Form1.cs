@@ -19,16 +19,18 @@ namespace Polimorfismo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conta c1 = new Conta();
-            c1.Deposita(10);
-            ContaPoupanca c2 = new ContaPoupanca();
-            c2.Deposita(100);
+            Conta[] contas = new Conta[2];
+            contas[0] = new Conta();
+            contas[1] = new ContaPoupanca();
 
-            TotalizadorDeConta t = new TotalizadorDeConta();
-            t.Adiciona(c1);
-            t.Adiciona(c2);
+            contas[0].Deposita(10);
+            contas[1].Deposita(100);
+            for(int i = 0; i < contas.Length; i++)
+            {
+                MessageBox.Show("O saldo da conta é: " + contas[i].Saldo);
+            }
 
-            MessageBox.Show("O total é: " + t.Total);
+            
         }
     }
 }
