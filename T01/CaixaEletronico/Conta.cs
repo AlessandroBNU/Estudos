@@ -11,22 +11,27 @@ namespace CaixaEletronico
     {
         public int Numero { get; set; }
         public Cliente Titular { get; set; }
-        public double Saldo { get; private set; }
+        public double Saldo { get; protected set; }
+        public int Tipo { get; set; }
+
+    
 
 
-        public void Deposita(double valorASerDepositado)
+
+
+
+        public void Deposita(double valor)
         {
-            if (valorASerDepositado > 0)
+            if (valor> 0)
             {
-                this.Saldo += valorASerDepositado;
+                this.Saldo += valor;
             }
         }
-        public void Saca(double textoDoValorDoSaque)
-        {
-            if (textoDoValorDoSaque > 0)
-            {
-                this.Saldo -= textoDoValorDoSaque;
-            }
+        public virtual void Saca(double valor)
+        {   
+                this.Saldo -= valor;
+           
+            
         }
 
     }
