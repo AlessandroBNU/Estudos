@@ -81,5 +81,19 @@ namespace CaixaEletronico
 
             MessageBox.Show("O total é: " + t.Total);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Conta[] contas = new Conta[2];
+            contas[0] = new Conta();
+            contas[1] = new ContaPoupanca();
+
+            contas[0].Deposita(20);
+            contas[1].Deposita(100);
+            foreach(Conta conta in contas)
+            {
+                MessageBox.Show("O saldo da conta é: " + conta.Saldo);
+            }
+        }
     }
 }
