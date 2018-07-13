@@ -65,9 +65,21 @@ namespace CaixaEletronico
             textoP.Text = Convert.ToString (conta.Saldo);
         }
 
-        private void textoTitular_TextChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            Conta c1 = new Conta();
+            c1.Deposita(100);
+            ContaPoupanca c2 = new ContaPoupanca();
+            c2.Deposita(20);
+            
 
+            TotalizadorDeContas t = new TotalizadorDeContas();
+            t.Adiciona(c1);
+            t.Adiciona(c2);
+
+           
+
+            MessageBox.Show("O total é: " + t.Total);
         }
     }
 }
