@@ -12,6 +12,9 @@ namespace Herenca
         {
             this.Saldo -= valor + 0.1;
         }
-
+        public override void Deposita(double valor)
+        {
+            this.Saldo += valor + 0.1;
+        }
     }
 }

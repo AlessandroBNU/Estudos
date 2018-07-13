@@ -20,8 +20,8 @@ namespace Herenca
         private void button1_Click(object sender, EventArgs e)
         {
             ContaPoupanca cp = new ContaPoupanca();
-            cp.Deposita(1000);
-            cp.Saca(100);
+            cp.Deposita(100);
+            cp.Saca(50);
 
             MessageBox.Show("Saldo Poupança: " + cp.Saldo);
 

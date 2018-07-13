@@ -14,6 +14,8 @@ namespace Herenca
 
         public Cliente Titular { get; set; }
 
+     
+
 
         public virtual void Saca(double valor)
         {
