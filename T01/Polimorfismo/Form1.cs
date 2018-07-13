@@ -25,9 +25,9 @@ namespace Polimorfismo
 
             contas[0].Deposita(10);
             contas[1].Deposita(100);
-            for(int i = 0; i < contas.Length; i++)
+            foreach(Conta conta in contas)
             {
-                MessageBox.Show("O saldo da conta é: " + contas[i].Saldo);
+                MessageBox.Show("O saldo da conta é: " + conta.Saldo);
             }
 
             
