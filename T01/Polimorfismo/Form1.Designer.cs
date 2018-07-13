@@ -28,34 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboContas = new System.Windows.Forms.ComboBox();
+            this.textoTitular = new System.Windows.Forms.TextBox();
+            this.textoNumero = new System.Windows.Forms.TextBox();
+            this.textoSaldo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // comboContas
             // 
-            this.button1.Location = new System.Drawing.Point(91, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(91, 62);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(121, 21);
+            this.comboContas.TabIndex = 1;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
+            // textoTitular
+            // 
+            this.textoTitular.Location = new System.Drawing.Point(102, 99);
+            this.textoTitular.Name = "textoTitular";
+            this.textoTitular.Size = new System.Drawing.Size(100, 20);
+            this.textoTitular.TabIndex = 2;
+            // 
+            // textoNumero
+            // 
+            this.textoNumero.Location = new System.Drawing.Point(102, 137);
+            this.textoNumero.Name = "textoNumero";
+            this.textoNumero.Size = new System.Drawing.Size(100, 20);
+            this.textoNumero.TabIndex = 3;
+            // 
+            // textoSaldo
+            // 
+            this.textoSaldo.Location = new System.Drawing.Point(102, 176);
+            this.textoSaldo.Name = "textoSaldo";
+            this.textoSaldo.Size = new System.Drawing.Size(100, 20);
+            this.textoSaldo.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(348, 271);
+            this.Controls.Add(this.textoSaldo);
+            this.Controls.Add(this.textoNumero);
+            this.Controls.Add(this.textoTitular);
+            this.Controls.Add(this.comboContas);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboContas;
+        private System.Windows.Forms.TextBox textoTitular;
+        private System.Windows.Forms.TextBox textoNumero;
+        private System.Windows.Forms.TextBox textoSaldo;
     }
 }
 

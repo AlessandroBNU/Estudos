@@ -12,7 +12,7 @@ namespace Polimorfismo
 
         public double Saldo { get; protected set; }
         
-
+        public string Titular { get; set; }
 
 
         public virtual void Saca(double valor)
