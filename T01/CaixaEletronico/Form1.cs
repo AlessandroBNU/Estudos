@@ -165,5 +165,18 @@ namespace CaixaEletronico
 
             MessageBox.Show("Saldo Atual: " + contaCorrente.Saldo);
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ContaPoupanca cp = new ContaPoupanca();
+            ContaInvestimento ci = new ContaInvestimento();
+            cp.Deposita(10);
+            ci.Deposita(100);
+            TotalizadorDeTributos t = new TotalizadorDeTributos();
+            t.Acumula(cp);
+            t.Acumula(ci);
+
+            MessageBox.Show("Tributos: " + t.Total);
+        }
     }
 }

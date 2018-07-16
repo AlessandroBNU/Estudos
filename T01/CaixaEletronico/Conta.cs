@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace CaixaEletronico
 {
 
-     abstract class Conta
+    abstract class Conta
     {
         public int Numero { get; set; }
         public Cliente Titular { get; set; }
         public double Saldo { get; protected set; }
         public int Tipo { get; set; }
 
-        
+
 
 
 
@@ -32,13 +32,14 @@ namespace CaixaEletronico
 
         public void Deposita(double valor)
         {
-            if (valor> 0)
+            if (valor > 0)
             {
                 this.Saldo += valor;
             }
         }
-        public abstract void Saca(double valor);
-        
+        public void Saca(double valor)
+        {
 
+        }
     }
 }

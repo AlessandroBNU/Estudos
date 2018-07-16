@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class ContaCorrente : Conta
+    interface Tributavel
     {
-        public void Saca(double valor)
-        {
-            this.Saldo -= valor;
-        }
-
+        double CalculaTributo();
     }
+   
 }

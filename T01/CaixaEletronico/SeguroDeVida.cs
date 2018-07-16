@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class ContaCorrente : Conta
+    class SeguroDeVida : ITributavel
     {
-        public void Saca(double valor)
+        public double CalculaTributos()
         {
-            this.Saldo -= valor;
+            return 42.0;
         }
-
     }
 }

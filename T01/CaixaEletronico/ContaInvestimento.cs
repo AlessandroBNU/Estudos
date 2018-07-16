@@ -6,23 +6,19 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class ContaPoupanca : Conta, ITributavel 
+    class ContaInvestimento : Conta, Tributavel
     {
         public  void Saca(double valor)
         {
-            this.Saldo -= valor + 0.1;
+            this.Saldo -= valor;
         }
-        public void CalculaInvestimento()
-        {
 
-        }
         public double CalculaTributo()
         {
             return this.Saldo * 0.02;
         }
-        public double CalculaTributos()
-        {
-            return this.Saldo * 0.02;
-        }
-    } 
+    }
+
+
 }
+
