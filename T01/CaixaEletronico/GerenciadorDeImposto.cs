@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class TotalizadorDeTributos
+    class GerenciadorDeImposto
     {
         public double Total { get; private set; }
-
-        public void Acumula(Conta conta)
+        public void Adiciona(ITributavel tributavel)
         {
-            this.Total += conta.Saldo;
+            this.Total += tributavel.CalculaTributos();
         }
-        
-        
     }
 }

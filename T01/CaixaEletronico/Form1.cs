@@ -89,13 +89,13 @@ namespace CaixaEletronico
             c1.Deposita(100);
             ContaPoupanca c2 = new ContaPoupanca();
             c2.Deposita(20);
-            
+
 
             TotalizadorDeContas t = new TotalizadorDeContas();
             t.Adiciona(c1);
             t.Adiciona(c2);
 
-           
+
 
             MessageBox.Show("O total é: " + t.Total);
         }
@@ -108,7 +108,7 @@ namespace CaixaEletronico
 
             contas[0].Deposita(20);
             contas[1].Deposita(100);
-            foreach(Conta conta in contas)
+            foreach (Conta conta in contas)
             {
                 MessageBox.Show("O saldo da conta é: " + conta.Saldo);
             }
@@ -178,5 +178,17 @@ namespace CaixaEletronico
 
             MessageBox.Show("Tributos: " + t.Total);
         }
+        
+       
+private void button9_Click(object sender, EventArgs e)
+        {
+            GerenciadorDeImposto gerenciador = new GerenciadorDeImposto();
+            ContaPoupanca cp = new ContaPoupanca();
+            SeguroDeVida sv = new SeguroDeVida();
+            gerenciador.Adiciona(cp);
+            gerenciador.Adiciona(sv);
+            MessageBox.Show("Total: " + gerenciador.Total);
+        }
     }
+    
 }
