@@ -36,12 +36,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textoP = new System.Windows.Forms.TextBox();
             this.textoTitular = new System.Windows.Forms.TextBox();
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.comboContas = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.destinoDaTransferencia = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textoNumero
@@ -114,23 +115,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Saldo da Conta";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(50, 337);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Saldo da Poupança";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // textoP
-            // 
-            this.textoP.Location = new System.Drawing.Point(168, 340);
-            this.textoP.Name = "textoP";
-            this.textoP.Size = new System.Drawing.Size(112, 20);
-            this.textoP.TabIndex = 12;
-            // 
             // textoTitular
             // 
             this.textoTitular.Location = new System.Drawing.Point(131, 117);
@@ -165,17 +149,45 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // comboContas
+            // 
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(111, 78);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(121, 21);
+            this.comboContas.TabIndex = 17;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(131, 367);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Transferir";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // destinoDaTransferencia
+            // 
+            this.destinoDaTransferencia.FormattingEnabled = true;
+            this.destinoDaTransferencia.Location = new System.Drawing.Point(111, 340);
+            this.destinoDaTransferencia.Name = "destinoDaTransferencia";
+            this.destinoDaTransferencia.Size = new System.Drawing.Size(121, 21);
+            this.destinoDaTransferencia.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.destinoDaTransferencia);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.comboContas);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textoSaldo);
             this.Controls.Add(this.textoTitular);
-            this.Controls.Add(this.textoP);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -201,12 +213,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textoP;
         private System.Windows.Forms.TextBox textoTitular;
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox comboContas;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox destinoDaTransferencia;
     }
 }
 
