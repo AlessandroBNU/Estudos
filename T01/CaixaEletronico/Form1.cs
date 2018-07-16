@@ -85,7 +85,7 @@ namespace CaixaEletronico
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Conta c1 = new Conta();
+            Conta c1 = new ContaCorrente();
             c1.Deposita(100);
             ContaPoupanca c2 = new ContaPoupanca();
             c2.Deposita(20);
@@ -103,7 +103,7 @@ namespace CaixaEletronico
         private void button5_Click(object sender, EventArgs e)
         {
             Conta[] contas = new Conta[2];
-            contas[0] = new Conta();
+            contas[0] = new ContaCorrente();
             contas[1] = new ContaPoupanca();
 
             contas[0].Deposita(20);
@@ -136,6 +136,34 @@ namespace CaixaEletronico
 
             contaSelecionada.TransferePara(valorTransferencia, contaDestino);
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var guilherme = new Cliente("Guilherme");
+            if (guilherme.PodeAbrirConta())
+            {
+                MessageBox.Show("Pode Abrir Nova Conta");
+            }
+            else
+            {
+                MessageBox.Show("Não Pode Abrir Nova Conta");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ContaCorrente contaCorrente = new ContaCorrente();
+            ContaPoupanca contaPoupanca = new ContaPoupanca();
+
+            contaCorrente.Deposita(100);
+            contaPoupanca.Deposita(100);
+
+            Conta conta = contaPoupanca;
+
+            contaCorrente.Saca(10);
+
+            MessageBox.Show("Saldo Atual: " + contaCorrente.Saldo);
         }
     }
 }

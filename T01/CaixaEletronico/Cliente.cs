@@ -9,11 +9,21 @@ namespace CaixaEletronico
    class Cliente
     {
         public string Nome { get; set; }
-        public string rg;
-        public string cpf;
-        public string endereco;
-        public int idade;
+        public string Rg { get; set; }
+        public string Cpf { get; set; }
+        public string Endereco { get; set; }
+        public int Idade { get; set; }
+        public bool EEmancipado { get; set; }
 
+
+        public bool PodeAbrirConta()
+        {
+            var maiorDeIdade = (this.Idade >= 18);
+            var emancipado = (this.EEmancipado);
+            var temCpf = !string.IsNullOrEmpty(this.Cpf);
+
+            return (maiorDeIdade || emancipado) && temCpf;
+        }
         public Cliente(string nome)
         {
             this.Nome = nome;
@@ -23,7 +33,7 @@ namespace CaixaEletronico
 
         public bool EhMaiorDeIdade()
         {
-            return this.idade >= 18;
+            return this.Idade >= 18;
         }
     }
 }
