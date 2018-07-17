@@ -37,11 +37,13 @@ namespace CaixaEletronico
             contas[0].Titular = new Cliente();
             contas[0].Numero = 1;
             contas[0].Titular.Nome = "Victor";
+            
 
             contas[1] = new ContaPoupanca();
             contas[1].Titular = new Cliente();
             contas[1].Numero = 2;
             contas[1].Titular.Nome = "Mario";
+           
 
             contas[2] = new ContaPoupanca();
             contas[2].Titular = new Cliente();
@@ -227,8 +229,15 @@ private void button9_Click(object sender, EventArgs e)
 
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        { 
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Cliente cliente1 = new Cliente("Guilherme");
+            cliente1.Rg = "1234-5";
+
+            Cliente cliente2 = new Cliente("Guilherme");
+            cliente2.Rg = "1234-5";
+            MessageBox.Show("Iguais? " + cliente1.Equals(cliente2));
+
         }
     }
     

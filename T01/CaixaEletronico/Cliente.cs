@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Benner.CaixaEletronico.Usuarios
 {
-   class Cliente
+   class Cliente : Object
     {
         public string Nome { get; set; }
         public string Rg { get; set; }
@@ -34,6 +34,11 @@ namespace Benner.CaixaEletronico.Usuarios
         public bool EhMaiorDeIdade()
         {
             return this.Idade >= 18;
+        }
+        public override bool Equals(object obj)
+        {
+            Cliente cliente = (Cliente)obj;
+            return this.Rg.Equals(cliente.Rg);
         }
     }
 }
