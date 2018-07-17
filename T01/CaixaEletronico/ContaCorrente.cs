@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Benner.CaixaEletronico.Contas;
+using Benner.CaixaEletronico.SiE;
 
-namespace CaixaEletronico
+namespace Benner.CaixaEletronico.CtaCorrente
 {
     class ContaCorrente : Conta
     {

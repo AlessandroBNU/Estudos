@@ -7,12 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Benner.CaixaEletronico.Contas;
+using Benner.CaixaEletronico.Usuarios;
+using Benner.CaixaEletronico.CtaPoupanca;
+using Benner.CaixaEletronico.CtaCorrente;
+using Benner.CaixaEletronico.Tri;
+using Benner.CaixaEletronico.ITri;
+using Benner.CaixaEletronico.SiE;
+using Benner.CaixaEletronico.TContas;
+using Benner.CaixaEletronico.SVida;
+using Benner.CaixaEletronico.GImposto;
+using Benner.CaixaEletronico.TTri;
 
 namespace CaixaEletronico
 {
     public partial class Form1 : Form
     {
-        
         Conta[] contas;
         public Form1()
         {

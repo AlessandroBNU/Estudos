@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Benner.CaixaEletronico.Contas;
+using Benner.CaixaEletronico.SiE;
+using Benner.CaixaEletronico.ITri;
 
-namespace CaixaEletronico
+
+namespace Benner.CaixaEletronico.CtaPoupanca
 {
     class ContaPoupanca : Conta, ITributavel 
     {

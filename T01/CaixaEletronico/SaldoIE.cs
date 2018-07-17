@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaixaEletronico
+namespace Benner.CaixaEletronico.SiE
 {
     class SaldoIE : Exception
     {

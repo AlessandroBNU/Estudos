@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Benner.CaixaEletronico.ITri;
 
-namespace CaixaEletronico
+namespace Benner.CaixaEletronico.SVida
 {
     class SeguroDeVida : ITributavel
     {
