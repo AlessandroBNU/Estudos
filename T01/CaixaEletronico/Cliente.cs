@@ -40,6 +40,10 @@ namespace Benner.CaixaEletronico.Usuarios
             Cliente cliente = (Cliente)obj;
             return this.Rg.Equals(cliente.Rg);
         }
+        public override string ToString()
+        {
+            return "Cliente Nome: " + this.Nome + "Rg: " + this.Rg;
+        }
     }
 }
 

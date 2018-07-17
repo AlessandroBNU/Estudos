@@ -236,7 +236,7 @@ private void button9_Click(object sender, EventArgs e)
 
             Cliente cliente2 = new Cliente("Guilherme");
             cliente2.Rg = "1234-5";
-            MessageBox.Show("Iguais? " + cliente1.Equals(cliente2));
+            MessageBox.Show(cliente1.ToString());
 
         }
     }
