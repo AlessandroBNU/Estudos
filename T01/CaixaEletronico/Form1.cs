@@ -71,7 +71,20 @@ namespace CaixaEletronico
             double valorSaque = Convert.ToDouble(textoDoValorDoSaque);
             int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = this.contas[indiceSelecionado];
-            contaSelecionada.Saca(valorSaque);
+            try
+            {
+                contaSelecionada.Saca(valorSaque);
+                MessageBox.Show("Dinheiro Liberado");
+            }
+            catch (SaldoIE exception)
+            {
+                MessageBox.Show("Saldo Insuficiente");
+            }
+            catch (ArgumentException exception)
+                {
+                MessageBox.Show("Valor Inválido para o Saque");
+                }
+
             this.MostraConta(contaSelecionada);
 
 
@@ -197,6 +210,15 @@ private void button9_Click(object sender, EventArgs e)
             ContaCorrente c2 = new ContaCorrente();
             MessageBox.Show("Total: " + ContaCorrente.TotalDeContas);
             MessageBox.Show("Proximo " + ContaCorrente.ProximoNumero());
+        }
+
+        private void textoValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        { 
         }
     }
     

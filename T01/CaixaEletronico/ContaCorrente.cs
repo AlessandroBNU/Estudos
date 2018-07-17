@@ -17,9 +17,21 @@ namespace CaixaEletronico
         {
             return ContaCorrente.TotalDeContas + 1;
         }
-        public void Saca(double valor)
+        public override void Saca(double valor)
         {
-            this.Saldo -= valor;
+            if (valor < 0)
+            {
+                throw new ArgumentException();
+            }
+            if (this.Saldo >= valor)
+            {
+                this.Saldo -= valor;
+                
+            }
+            else
+            {
+                throw new SaldoIE();
+            }
         }
 
     }

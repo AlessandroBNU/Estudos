@@ -38,15 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textoTitular = new System.Windows.Forms.TextBox();
             this.textoSaldo = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.destinoDaTransferencia = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,6 +60,7 @@
             this.textoValor.Name = "textoValor";
             this.textoValor.Size = new System.Drawing.Size(83, 20);
             this.textoValor.TabIndex = 3;
+            this.textoValor.TextChanged += new System.EventHandler(this.textoValor_TextChanged);
             // 
             // button1
             // 
@@ -134,16 +132,6 @@
             this.textoSaldo.Size = new System.Drawing.Size(83, 20);
             this.textoSaldo.TabIndex = 14;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(87, 373);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Totalizador de Contas";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(168, 373);
@@ -183,7 +171,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(87, 432);
+            this.button6.Location = new System.Drawing.Point(87, 373);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 20;
@@ -193,37 +181,17 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(168, 432);
+            this.button7.Location = new System.Drawing.Point(87, 402);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(156, 23);
             this.button7.TabIndex = 21;
             this.button7.Text = "Cº Corrente";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(168, 402);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "Tributos";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(87, 401);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "Imposto";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(87, 461);
+            this.button10.Location = new System.Drawing.Point(87, 431);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(156, 23);
             this.button10.TabIndex = 24;
@@ -237,15 +205,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 499);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.destinoDaTransferencia);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboContas);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.textoSaldo);
             this.Controls.Add(this.textoTitular);
             this.Controls.Add(this.label4);
@@ -275,15 +240,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textoTitular;
         private System.Windows.Forms.TextBox textoSaldo;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboContas;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox destinoDaTransferencia;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
     }
 }

@@ -8,9 +8,21 @@ namespace CaixaEletronico
 {
     class ContaPoupanca : Conta, ITributavel 
     {
-        public  void Saca(double valor)
+        public override void  Saca(double valor)
         {
-            this.Saldo -= valor + 0.1;
+            if (valor < 0)
+            {
+                throw new ArgumentException();
+            }
+            if (this.Saldo >= valor)
+            {
+                this.Saldo -= valor + 0.1;
+                
+            }
+            else
+            {
+                throw new SaldoIE();
+            }
         }
         public void CalculaInvestimento()
         {
