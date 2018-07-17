@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Benner.CaixaEletronico.Contas;
 using Benner.CaixaEletronico.SiE;
+using Benner.CaixaEletronico.CContas;
+using Benner.CaixaEletronico.FormP;
 
 namespace Benner.CaixaEletronico.CtaCorrente
 {

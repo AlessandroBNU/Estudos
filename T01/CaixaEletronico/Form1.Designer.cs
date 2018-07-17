@@ -1,4 +1,4 @@
-﻿namespace CaixaEletronico
+﻿namespace Benner.CaixaEletronico.FormP
 {
     partial class Form1
     {
@@ -121,6 +121,8 @@
             // 
             // textoTitular
             // 
+            this.textoTitular.BackColor = System.Drawing.SystemColors.Window;
+            this.textoTitular.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textoTitular.Location = new System.Drawing.Point(131, 117);
             this.textoTitular.Name = "textoTitular";
             this.textoTitular.Size = new System.Drawing.Size(83, 20);

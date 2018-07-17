@@ -18,12 +18,16 @@ using Benner.CaixaEletronico.TContas;
 using Benner.CaixaEletronico.SVida;
 using Benner.CaixaEletronico.GImposto;
 using Benner.CaixaEletronico.TTri;
+using Benner.CaixaEletronico.CContas;
+using Benner.CaixaEletronico.CIv;
 
-namespace CaixaEletronico
+namespace Benner.CaixaEletronico.FormP
+
 {
     public partial class Form1 : Form
     {
         Conta[] contas;
+        private int quantidadeDeContas;
         public Form1()
         {
             InitializeComponent();
@@ -238,6 +242,13 @@ private void button9_Click(object sender, EventArgs e)
             cliente2.Rg = "1234-5";
             MessageBox.Show(cliente1.ToString());
 
+        }
+        public void AdicionaConta(Conta conta)
+        {
+            this.contas[this.quantidadeDeContas] = conta;
+            this.quantidadeDeContas++;
+
+            comboContas.Items.Add(conta);
         }
     }
     

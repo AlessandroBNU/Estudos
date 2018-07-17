@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Benner.CaixaEletronico.ITri;
+using Benner.CaixaEletronico.FormP;
 
 namespace Benner.CaixaEletronico.GImposto
 {

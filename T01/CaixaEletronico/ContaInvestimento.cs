@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Benner.CaixaEletronico.Contas;
 using Benner.CaixaEletronico.Tri;
+using Benner.CaixaEletronico.FormP;
 
-namespace CaixaEletronico
+namespace Benner.CaixaEletronico.CIv
 {
     class ContaInvestimento : Conta, Tributavel
     {

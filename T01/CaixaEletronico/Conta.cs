@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Benner.CaixaEletronico.Usuarios;
+using Benner.CaixaEletronico.CContas;
+using Benner.CaixaEletronico.FormP;
 
 namespace Benner.CaixaEletronico.Contas
 {
@@ -14,12 +16,6 @@ namespace Benner.CaixaEletronico.Contas
         public Cliente Titular { get; set; }
         public double Saldo { get; protected set; }
         public int Tipo { get; set; }
-
-
-
-
-
-
 
 
         public void TransferePara(double valor, Conta destino)
@@ -42,5 +38,7 @@ namespace Benner.CaixaEletronico.Contas
         {
 
         }
+      
+
     }
 }
