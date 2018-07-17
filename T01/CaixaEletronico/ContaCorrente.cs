@@ -8,6 +8,15 @@ namespace CaixaEletronico
 {
     class ContaCorrente : Conta
     {
+        public static int TotalDeContas { get; private set; }
+        public ContaCorrente()
+        {
+            ContaCorrente.TotalDeContas++;
+        }
+        public static int ProximoNumero()
+        {
+            return ContaCorrente.TotalDeContas + 1;
+        }
         public void Saca(double valor)
         {
             this.Saldo -= valor;

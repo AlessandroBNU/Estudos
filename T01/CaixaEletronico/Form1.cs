@@ -12,7 +12,7 @@ namespace CaixaEletronico
 {
     public partial class Form1 : Form
     {
-
+        
         Conta[] contas;
         public Form1()
         {
@@ -188,6 +188,15 @@ private void button9_Click(object sender, EventArgs e)
             gerenciador.Adiciona(cp);
             gerenciador.Adiciona(sv);
             MessageBox.Show("Total: " + gerenciador.Total);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ContaCorrente c = new ContaCorrente();
+            MessageBox.Show("Total: " + ContaCorrente.TotalDeContas);
+            ContaCorrente c2 = new ContaCorrente();
+            MessageBox.Show("Total: " + ContaCorrente.TotalDeContas);
+            MessageBox.Show("Proximo " + ContaCorrente.ProximoNumero());
         }
     }
     
