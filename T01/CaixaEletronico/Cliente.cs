@@ -8,7 +8,7 @@ using Benner.CaixaEletronico.FormP;
 
 namespace Benner.CaixaEletronico.Usuarios
 {
-   class Cliente : Object
+  public class Cliente : Object
     {
         public string Nome { get; set; }
         public string Rg { get; set; }

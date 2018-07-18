@@ -27,7 +27,7 @@ namespace Benner.CaixaEletronico.FormP
     public partial class Form1 : Form
     {
         Conta[] contas;
-        private int quantidadeDeContas;
+        private int quantidadeDeContas = 3;
         public Form1()
         {
             InitializeComponent();
@@ -35,19 +35,19 @@ namespace Benner.CaixaEletronico.FormP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            contas = new Conta[3];
+            contas = new Conta[10];
 
             contas[0] = new ContaPoupanca();
             contas[0].Titular = new Cliente();
             contas[0].Numero = 1;
             contas[0].Titular.Nome = "Victor";
-            
+
 
             contas[1] = new ContaPoupanca();
             contas[1].Titular = new Cliente();
             contas[1].Numero = 2;
             contas[1].Titular.Nome = "Mario";
-           
+
 
             contas[2] = new ContaPoupanca();
             contas[2].Titular = new Cliente();
@@ -56,8 +56,11 @@ namespace Benner.CaixaEletronico.FormP
 
             foreach (Conta conta in contas)
             {
-                comboContas.Items.Add(conta.Titular.Nome);
-                destinoDaTransferencia.Items.Add(conta.Titular.Nome);
+                if (conta != null)
+                {
+                    comboContas.Items.Add(conta);
+                    destinoDaTransferencia.Items.Add(conta.Titular.Nome);
+                }
             }
 
         }
@@ -97,9 +100,9 @@ namespace Benner.CaixaEletronico.FormP
                 MessageBox.Show("Saldo Insuficiente");
             }
             catch (ArgumentException exception)
-                {
+            {
                 MessageBox.Show("Valor Inválido para o Saque");
-                }
+            }
 
             this.MostraConta(contaSelecionada);
 
@@ -131,7 +134,7 @@ namespace Benner.CaixaEletronico.FormP
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Conta[] contas = new Conta[2];
+            Conta[] contas = new Conta[20];
             contas[0] = new ContaCorrente();
             contas[1] = new ContaPoupanca();
 
@@ -146,7 +149,7 @@ namespace Benner.CaixaEletronico.FormP
         private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indiceSelecionado = comboContas.SelectedIndex;
-            Conta contaSelecionada = contas[indiceSelecionado];
+            Conta contaSelecionada = this.contas[indiceSelecionado];
 
             textoTitular.Text = contaSelecionada.Titular.Nome;
             textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
@@ -169,15 +172,8 @@ namespace Benner.CaixaEletronico.FormP
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var guilherme = new Cliente("Guilherme");
-            if (guilherme.PodeAbrirConta())
-            {
-                MessageBox.Show("Pode Abrir Nova Conta");
-            }
-            else
-            {
-                MessageBox.Show("Não Pode Abrir Nova Conta");
-            }
+            CadastroDeContas cadastroC = new CadastroDeContas(this);
+            cadastroC.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -207,9 +203,9 @@ namespace Benner.CaixaEletronico.FormP
 
             MessageBox.Show("Tributos: " + t.Total);
         }
-        
-       
-private void button9_Click(object sender, EventArgs e)
+
+
+        private void button9_Click(object sender, EventArgs e)
         {
             GerenciadorDeImposto gerenciador = new GerenciadorDeImposto();
             ContaPoupanca cp = new ContaPoupanca();
@@ -245,11 +241,35 @@ private void button9_Click(object sender, EventArgs e)
         }
         public void AdicionaConta(Conta conta)
         {
+            if (this.quantidadeDeContas == this.contas.Length)
+            {
+                Conta[] novo = new Conta[this.contas.Length * 2];
+                for (int i = 0; i < this.quantidadeDeContas; i++)
+                {
+                    novo[i] = this.contas[i];
+                }
+                this.contas = novo;
+            }
             this.contas[this.quantidadeDeContas] = conta;
             this.quantidadeDeContas++;
-
             comboContas.Items.Add(conta);
         }
+
+        public void removeConta (Conta conta)
+        {
+            comboContas.Items.Remove(conta);
+            int i;
+            for (i = 0; i < this.quantidadeDeContas; i++)
+            {
+                if (this.contas[i] == conta)
+                {
+                    break;
+                }
+            }
+            while (i + 1 < this.quantidadeDeContas)
+            {
+                this.contas[i] = this.contas[i + 1];
+            }
+        }
     }
-    
 }

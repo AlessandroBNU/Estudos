@@ -10,7 +10,7 @@ using Benner.CaixaEletronico.FormP;
 namespace Benner.CaixaEletronico.Contas
 {
 
-    abstract class Conta
+    public abstract class Conta
     {
         public int Numero { get; set; }
         public Cliente Titular { get; set; }
@@ -38,7 +38,10 @@ namespace Benner.CaixaEletronico.Contas
         {
 
         }
-      
+        public override string ToString()
+        {
+            return Titular.Nome;
+        }
 
     }
 }
