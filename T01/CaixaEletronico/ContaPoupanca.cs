@@ -12,7 +12,7 @@ using Benner.CaixaEletronico.FormP;
 
 namespace Benner.CaixaEletronico.CtaPoupanca
 {
-    class ContaPoupanca : Conta, ITributavel 
+    public class ContaPoupanca : Conta, ITributavel 
     {
         public override void  Saca(double valor)
         {

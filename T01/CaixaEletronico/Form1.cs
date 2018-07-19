@@ -271,5 +271,23 @@ namespace Benner.CaixaEletronico.FormP
                 this.contas[i] = this.contas[i + 1];
             }
         }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            var contas = new List<Conta>();
+            var cliente1 = new ContaCorrente();
+            cliente1.Titular = new Cliente();
+            cliente1.Titular.Nome = "Victor";
+            contas.Add(cliente1);
+
+            Conta copiac1 = contas[0];
+
+            var cliente2 = new ContaPoupanca();
+            cliente2.Titular = new Cliente();
+            cliente2.Titular.Nome = "Marioco";
+
+            MessageBox.Show("Está lá " + contas.Contains(cliente1));
+            MessageBox.Show("Está lá " + contas.Contains(cliente2));
+        }
     }
 }

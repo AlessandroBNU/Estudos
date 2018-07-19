@@ -40,7 +40,7 @@ namespace Benner.CaixaEletronico.Contas
         }
         public override string ToString()
         {
-            return Titular.Nome;
+           return Titular.Nome;
         }
 
     }
