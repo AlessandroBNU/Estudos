@@ -274,20 +274,36 @@ namespace Benner.CaixaEletronico.FormP
 
         private void button4_Click_2(object sender, EventArgs e)
         {
-            var contas = new List<Conta>();
+            var contas = new HashSet<Conta>();
+
             var cliente1 = new ContaCorrente();
             cliente1.Titular = new Cliente();
             cliente1.Titular.Nome = "Victor";
-            contas.Add(cliente1);
 
-            Conta copiac1 = contas[0];
+            contas.Add(cliente1);
 
             var cliente2 = new ContaPoupanca();
             cliente2.Titular = new Cliente();
             cliente2.Titular.Nome = "Marioco";
 
+            contas.Add(cliente1);
+
+            foreach (var c in contas)
+            {
+                MessageBox.Show(c.Titular.Nome);
+            }
+
             MessageBox.Show("Está lá " + contas.Contains(cliente1));
             MessageBox.Show("Está lá " + contas.Contains(cliente2));
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            int idade = 42;
+            string nome = "Guilherme";
+            string mensagem = string.Format ("Óla {0}, sua idade é: {1} anos", nome, idade);
+
+            MessageBox.Show(mensagem);
         }
     }
 }
