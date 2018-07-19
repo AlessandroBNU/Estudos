@@ -299,9 +299,11 @@ namespace Benner.CaixaEletronico.FormP
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            string curso = "fnll";
-            curso = curso.ToUpper() .Replace("1", "2");
-            MessageBox.Show(curso);
+            string nomeCompleto = "guilherme silveira";
+
+            
+            string primeiroNome = nomeCompleto.Substring(0, 9);
+            MessageBox.Show(primeiroNome);
         }
     }
 }
