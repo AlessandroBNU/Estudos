@@ -20,6 +20,7 @@ using Benner.CaixaEletronico.GImposto;
 using Benner.CaixaEletronico.TTri;
 using Benner.CaixaEletronico.CContas;
 using Benner.CaixaEletronico.CIv;
+using System.IO;
 
 namespace Benner.CaixaEletronico.FormP
 
@@ -35,6 +36,8 @@ namespace Benner.CaixaEletronico.FormP
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
             contas = new Conta[10];
 
             contas[0] = new ContaPoupanca();
@@ -60,10 +63,36 @@ namespace Benner.CaixaEletronico.FormP
                 {
                     comboContas.Items.Add(conta);
                     destinoDaTransferencia.Items.Add(conta.Titular.Nome);
-                }
+                }                            
             }
+            if (File.Exists("entrada.txt")) 
+                {
+                    Stream entrada = File.Open("entrada.txt", FileMode.Open);
+                    StreamReader leitor = new StreamReader(entrada);
+                    string linha = leitor.ReadLine();
 
+                    while (linha != null)
+                    {
+                        texto.Text += linha;
+                        linha = leitor.ReadLine();
+                    }
+                    leitor.Close();
+                    entrada.Close();
+                }
         }
+
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Stream saida = File.Open("Entrada.txt", FileMode.Create);
+            StreamWriter escritor = new StreamWriter(saida);
+            escritor.Write(texto.Text);
+
+            escritor.Close();
+            saida.Close();
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             string textoDoValorDoDeposito = textoValor.Text;
@@ -305,5 +334,7 @@ namespace Benner.CaixaEletronico.FormP
             string segundoNome = nomeCompleto.Substring(posicaoDoS);
             MessageBox.Show(segundoNome);
         }
+
+      
     }
 }
