@@ -301,9 +301,9 @@ namespace Benner.CaixaEletronico.FormP
         {
             string nomeCompleto = "guilherme silveira";
 
-            
-            string primeiroNome = nomeCompleto.Substring(0, 9);
-            MessageBox.Show(primeiroNome);
+            int posicaoDoS = nomeCompleto.IndexOf("s");
+            string segundoNome = nomeCompleto.Substring(posicaoDoS);
+            MessageBox.Show(segundoNome);
         }
     }
 }
