@@ -299,11 +299,12 @@ namespace Benner.CaixaEletronico.FormP
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            int idade = 42;
-            string nome = "Guilherme";
-            string mensagem = string.Format ("Óla {0}, sua idade é: {1} anos", nome, idade);
-
-            MessageBox.Show(mensagem);
+            string texto = "Guilherme,42,sao paulo,brasil";
+            string[] partes = texto.Split(',');
+            foreach (string parte in partes)
+            {
+                MessageBox.Show(parte);
+            }
         }
     }
 }
