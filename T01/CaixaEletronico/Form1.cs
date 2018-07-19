@@ -27,7 +27,7 @@ namespace Benner.CaixaEletronico.FormP
 {
     public partial class Form1 : Form
     {
-        Conta[] contas;
+        List<Conta> contas;
         private int quantidadeDeContas = 3;
         public Form1()
         {
@@ -38,26 +38,29 @@ namespace Benner.CaixaEletronico.FormP
         {
 
 
-            contas = new Conta[10];
+            contas = new List<Conta>();
 
-            contas[0] = new ContaPoupanca();
-            contas[0].Titular = new Cliente();
-            contas[0].Numero = 1;
-            contas[0].Titular.Nome = "Victor";
-
-
-            contas[1] = new ContaPoupanca();
-            contas[1].Titular = new Cliente();
-            contas[1].Numero = 2;
-            contas[1].Titular.Nome = "Mario";
+            Conta contaDoVictor = new ContaCorrente();
+            contaDoVictor.Titular = new Cliente();
+            contaDoVictor.Titular.Nome = "Victor";
+            contaDoVictor.Numero = 1;
+            contas.Add(contaDoVictor);
 
 
-            contas[2] = new ContaPoupanca();
-            contas[2].Titular = new Cliente();
-            contas[2].Numero = 3;
-            contas[2].Titular.Nome = "Guilherme";
+            Conta contaDoGuilherme = new ContaPoupanca();
+            contaDoGuilherme.Titular = new Cliente();
+            contaDoGuilherme.Titular.Nome = "Guilherme";
+            contaDoGuilherme.Numero = 2;
+            contas.Add(contaDoGuilherme);
 
-            foreach (Conta conta in contas)
+
+            Conta contaDoMauricio = new ContaInvestimento();
+            contaDoMauricio.Titular = new Cliente();
+            contaDoMauricio.Titular.Nome = "Mauricio";
+            contaDoMauricio.Numero = 3;
+            contas.Add(contaDoMauricio);
+
+            foreach (Conta conta in this.contas)
             {
                 if (conta != null)
                 {
@@ -270,19 +273,16 @@ namespace Benner.CaixaEletronico.FormP
         }
         public void AdicionaConta(Conta conta)
         {
-            if (this.quantidadeDeContas == this.contas.Length)
-            {
-                Conta[] novo = new Conta[this.contas.Length * 2];
-                for (int i = 0; i < this.quantidadeDeContas; i++)
-                {
-                    novo[i] = this.contas[i];
-                }
-                this.contas = novo;
-            }
-            this.contas[this.quantidadeDeContas] = conta;
-            this.quantidadeDeContas++;
-            comboContas.Items.Add(conta);
+            
+                this.contas.Add(conta);
+
+                comboContas.Items.Add(conta);
         }
+
+            public void RemoveConta(Conta c)
+            {
+                this.contas.Remove(c);
+            }
 
         public void removeConta (Conta conta)
         {
@@ -335,6 +335,19 @@ namespace Benner.CaixaEletronico.FormP
             MessageBox.Show(segundoNome);
         }
 
-      
+       
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            var filtradas = from conta in contas
+                            where conta.Saldo > 2000
+                            select conta;
+
+            foreach (Conta conta in filtradas)
+            {
+                MessageBox.Show("O saldo é: " + conta.Saldo);
+            }    
+            
+        }
     }
 }
