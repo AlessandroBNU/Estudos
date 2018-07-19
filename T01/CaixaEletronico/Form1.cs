@@ -299,12 +299,9 @@ namespace Benner.CaixaEletronico.FormP
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            string texto = "Guilherme,42,sao paulo,brasil";
-            string[] partes = texto.Split(',');
-            foreach (string parte in partes)
-            {
-                MessageBox.Show(parte);
-            }
+            string curso = "fnll";
+            curso = curso.ToUpper() .Replace("1", "2");
+            MessageBox.Show(curso);
         }
     }
 }
