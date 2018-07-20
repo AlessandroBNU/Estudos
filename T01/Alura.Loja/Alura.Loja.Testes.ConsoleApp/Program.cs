@@ -21,9 +21,18 @@ namespace Alura.Loja.Testes.ConsoleApp
             p.Categoria = "Livros";
             p.Preco = 19.89;
 
+            Produto p1 = new Produto();
+            p1.Nome = "Harry Potter e a Ordem da Fênix";
+            p1.Categoria = "Livros";
+            p1.Preco = 19.89;
+
+            Produto p2 = new Produto();
+            p2.Nome = "Harry Potter e a Ordem da Fênix";
+            p2.Categoria = "Livros";
+            p2.Preco = 19.89;
             using (var contexto = new LojaContext())
             {
-                contexto.Produtos.Add(p);
+                contexto.Produtos.AddRange(p, p1, p2);
                 contexto.SaveChanges();
             }
         }
