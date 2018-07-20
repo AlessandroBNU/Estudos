@@ -21,6 +21,7 @@ using Benner.CaixaEletronico.TTri;
 using Benner.CaixaEletronico.CContas;
 using Benner.CaixaEletronico.CIv;
 using System.IO;
+using Benner.CaixaEletronico.Sistema;
 
 namespace Benner.CaixaEletronico.FormP
 
@@ -348,6 +349,11 @@ namespace Benner.CaixaEletronico.FormP
                 MessageBox.Show("O saldo é: " + conta.Saldo);
             }    
             
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            MessageBox.Show(StringUteis.Pluralize("conta"));
         }
     }
 }
