@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,35 +14,35 @@ namespace Alura.Loja.Testes.ConsoleApp
             using (var contexto = new LojaContext())
             {
                 var produtos = contexto.Produtos.ToList();
-                foreach(var p in produtos)
-                {
-                    Console.WriteLine(p);
-                }
-                Console.WriteLine("==============");
-                foreach (var e in contexto.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e.State);
-                }
 
-                var p1 = produtos.Last();
-                p1.Nome = "007 - O Espião Que Me Amava";
+                ExibeEntries(contexto.ChangeTracker.Entries());
 
-                Console.WriteLine("==============");
-                foreach (var e in contexto.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e.State);
-                }
+                  var novoProduto = new Produto()
+                 {
+                    Nome = "Sabão em Pó",
+                    Categoria = "Limpeza",
+                     Preco = 5.99
+                 };
 
-                //contexto.SaveChanges();
+                 contexto.Produtos.Add(novoProduto);
+                contexto.Produtos.Remove(novoProduto);
 
-                // Console.WriteLine("==============");
-                // produtos = contexto.Produtos.ToList();
-                // foreach (var p in produtos)
-                // {
-                //    Console.WriteLine(p);
-                // }
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                 contexto.SaveChanges();
+
+                 ExibeEntries(contexto.ChangeTracker.Entries());
             }
-        } 
+        }
 
+        private static void ExibeEntries(IEnumerable<EntityEntry> entries)
+        {
+            Console.WriteLine("==============");
+            foreach (var e in entries)
+            {
+
+                Console.WriteLine(e.Entity.ToString() + " -" + e.State);
+            }
+        }
     }
 }
