@@ -27,7 +27,7 @@ namespace Benner.CaixaEletronico.Contas
             }
         }
 
-        public void Deposita(double valor)
+        public virtual void Deposita(double valor)
         {
             if (valor > 0)
             {

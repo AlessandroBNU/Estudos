@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Herenca
 {
-    class Conta
+   public abstract class Conta
     {
         public int Numero { get; set; }
 
@@ -22,7 +22,7 @@ namespace Herenca
              this.Saldo -= valor;
          
         }
-        public void Deposita(double valor)
+        public virtual void Deposita(double valor)
         {
             this.Saldo += valor;
         }

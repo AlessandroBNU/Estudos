@@ -25,7 +25,7 @@ namespace Herenca
 
             MessageBox.Show("Saldo Poupança: " + cp.Saldo);
 
-            Conta c = new Conta();
+            Conta c = new ContaPoupanca();
             c.Deposita(100);
             MessageBox.Show("Saldo da conta: " + c.Saldo);
 
