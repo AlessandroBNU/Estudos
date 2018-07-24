@@ -22,9 +22,9 @@ namespace Alura.Loja.Testes.ConsoleApp
             promocaoDePascoa.DataInicia = DateTime.Now;
             promocaoDePascoa.DataTermino = DateTime.Now.AddMonths(3);
 
-            promocaoDePascoa.Produtos.Add(new Produto());
-            promocaoDePascoa.Produtos.Add(new Produto());
-            promocaoDePascoa.Produtos.Add(new Produto());
+           // promocaoDePascoa.Produtos.Add(new Produto());
+           // promocaoDePascoa.Produtos.Add(new Produto());
+           // promocaoDePascoa.Produtos.Add(new Produto());
 
             using (var contexto = new LojaContext())
             {
