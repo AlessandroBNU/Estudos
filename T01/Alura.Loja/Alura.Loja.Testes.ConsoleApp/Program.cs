@@ -17,18 +17,16 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         static void Main(string[] args)
         {
-            var p1 = new Produto() { Nome = "Suco de Laranja", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = "Litros" };
-            var p2 = new Produto(){ Nome = "Café", Categoria = "Bebidas", PrecoUnitario = 12.45, Unidade = "Gramas" }; 
-            var p3 = new Produto() { Nome = "Macarrão", Categoria = "Alimentos", PrecoUnitario = 4.23, Unidade = "Gramas" }; 
-
-            var promocaoDePascoa = new Promocao();
-            promocaoDePascoa.Descricao = "Páscoa Feliz";
-            promocaoDePascoa.DataInicia = DateTime.Now;
-            promocaoDePascoa.DataTermino = DateTime.Now.AddMonths(3);
-
-            promocaoDePascoa.IncluiProduto(p1);
-            promocaoDePascoa.IncluiProduto(p2);
-            promocaoDePascoa.IncluiProduto(p3);
+            var fulano = new Cliente();
+            fulano.Nome = "Fulaninho de Tal";
+            fulano.EnderecoDeEntrega = new Endereco()
+            {
+                Numero = 12,
+                Logradouro = "Rua dos Iválidos",
+                Complemento = "Sobrado",
+                Bairro = "Centro",
+                Cidade = "Cidade"
+            };
 
             using (var contexto = new LojaContext())
             {
@@ -36,25 +34,11 @@ namespace Alura.Loja.Testes.ConsoleApp
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
-                //contexto.Promocoes.Add(promocaoDePascoa);
-
-                var promocao = contexto.Promocoes.Find(1);
-                contexto.Promocoes.Remove(promocao);
-                ExibeEntries(contexto.ChangeTracker.Entries());
-
-
-
-
-
+                contexto.Clientes.Add(fulano);
                 contexto.SaveChanges();
+
             }
-        } 
-        private static void ExibeEntries(IEnumerable<EntityEntry> entries)
-        {
-            foreach (var e in entries)
-            {
-                Console.WriteLine(e.Entity.ToString() + " - " + e.State);
-            }
+
         }
     }
 }
