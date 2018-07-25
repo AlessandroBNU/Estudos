@@ -34,14 +34,19 @@ namespace Alura.Loja.Testes.ConsoleApp
 
                 var produto = contexto
                     .Produtos
-                    .Include(p => p.Compras)
-                    .Where(p => p.Id == 9004)
+                    .Where(p => p.Id == 3002)
                     .FirstOrDefault();
+
+                contexto.Entry(produto)
+                    .Collection(p => p.Compras)
+                    .Query()
+                    .Where(c => c.Preco > 10)
+                    .Load();
 
                 Console.WriteLine($"Mostrando as compras do produto {produto.Nome}");
                 foreach (var intem in produto.Compras)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine("/t" + item);
                 }
             }
         }
