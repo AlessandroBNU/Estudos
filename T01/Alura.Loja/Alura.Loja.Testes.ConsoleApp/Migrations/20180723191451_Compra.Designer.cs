@@ -9,7 +9,7 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
     [DbContext(typeof(LojaContext))]
     [Migration("20180723191451_Compra")]
-    partial class Compra
+    partial class Comprar
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

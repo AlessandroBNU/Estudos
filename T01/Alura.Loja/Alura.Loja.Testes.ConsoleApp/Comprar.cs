@@ -1,6 +1,6 @@
 ﻿namespace Alura.Loja.Testes.ConsoleApp
 {
-    internal class Comprar
+    public class Comprar
     {
         public Comprar()
         {

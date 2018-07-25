@@ -15,10 +15,39 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         private static object e;
         private static IEnumerable<object> entries;
+        private static bool item;
 
         static void Main(string[] args)
-        {   
-            
+        {
+            using (var contexto = new LojaContext())
+            {
+                var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
+                var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+                loggerFactory.AddProvider(SqlLoggerProvider.Create());
+
+                var cliente = contexto
+                    .Clientes
+                    .Include(c => c.EnderecoDeEntrega)
+                    .FirstOrDefault();
+
+                Console.WriteLine($"Endereço de Entrega: {cliente.EnderecoDeEntrega.Logradouro}");
+
+                var produto = contexto
+                    .Produtos
+                    .Include(p => p.Compras)
+                    .Where(p => p.Id == 9004)
+                    .FirstOrDefault();
+
+                Console.WriteLine($"Mostrando as compras do produto {produto.Nome}");
+                foreach (var intem in produto.Compras)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+
+        private static void ExibeProdutosDaPromocao()
+        {
             using (var contexto2 = new LojaContext())
             {
                 var serviceProvider = contexto2.GetInfrastructure<IServiceProvider>();
@@ -32,14 +61,12 @@ namespace Alura.Loja.Testes.ConsoleApp
                     .FirstOrDefault();
 
                 Console.WriteLine("\nMostrando os produtos da promoção...");
-                foreach(var item in promocao.Produtos)
+                foreach (var item in promocao.Produtos)
                 {
                     Console.WriteLine(item.Produto);
                 }
             }
         }
-
-
 
         private static void IncluirPromocao ()
         {
