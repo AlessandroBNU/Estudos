@@ -1,4 +1,9 @@
- h1 {
+body {
+    background-color: #F2FFFC;
+    font-family: "Crimson Text", serif;
+    font-size: 20px;
+}
+main h1 {
      font-size: 60px;
      background-color: rgb(120, 30, 60);
      color: rgb(250, 255, 250);
