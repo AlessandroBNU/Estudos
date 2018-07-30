@@ -36,7 +36,6 @@ blockquote {
 aside {
 	background-color: #3C1D3D;
     color: #F2FFFC;
-    padding: 20px;
     text-align: center;
 }
 
@@ -60,7 +59,7 @@ aside a {
 }
 
 blockquote, aside, footer {
-    padding: 20px;
+    padding: 10px;
 }
 
 main div {
@@ -123,8 +122,6 @@ article {
     padding: 20px;
     text-align: center;
 }
-
-
 .fiat{
     float: right;
 }
@@ -132,32 +129,38 @@ article {
     float: left;
 }
 
-aside, img{
-    float: right;
-    width: 15%;
-}
 aside{
+    position: relative;
+    width: 15%;
     clear: right;
     box-sizing: border-box;
+    top: 230px;
 }
 main{
     float: left;
     width: 85%;
+     padding-bottom: 80px;
 }
 footer{
     clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
-.minha-foto, .navegacao-site {
+.minha-foto, aside {
 	float: right;
-	width: 15%;
 	box-sizing: border-box;
 	border-left: 10px solid black;
 	border-bottom: 10px solid black;
 }
-cite {
-	font-style: italic;
-	float: right;
-}
 .rodape-pagina {
     clear: both;
+}
+.minha-foto{
+    width: 230px;
+    position: absolute;
+    top 0;
+    right: 0;
 }
