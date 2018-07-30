@@ -30,6 +30,7 @@ blockquote {
 	width: 250px;
 	box-sizing: border-box;
 	margin: 20px 40px;
+    
 }
 
 aside {
@@ -46,6 +47,7 @@ footer {
 
 nav a {
 	color: #F2FFFC;
+     text-transform: lowercase;
 }
 
 main a {
@@ -108,6 +110,7 @@ em {
 
 h2 {
 	font-size: 30px;
+    clear: both;
 }
 article {
     padding-bottom: 30px;
@@ -119,4 +122,42 @@ article {
     color: #F2FFFC;
     padding: 20px;
     text-align: center;
+}
+
+
+.fiat{
+    float: right;
+}
+.petrobras{
+    float: left;
+}
+
+aside, img{
+    float: right;
+    width: 15%;
+}
+aside{
+    clear: right;
+    box-sizing: border-box;
+}
+main{
+    float: left;
+    width: 85%;
+}
+footer{
+    clear: both;
+}
+.minha-foto, .navegacao-site {
+	float: right;
+	width: 15%;
+	box-sizing: border-box;
+	border-left: 10px solid black;
+	border-bottom: 10px solid black;
+}
+cite {
+	font-style: italic;
+	float: right;
+}
+.rodape-pagina {
+    clear: both;
 }
