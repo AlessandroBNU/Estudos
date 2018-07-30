@@ -16,6 +16,7 @@ main h1 {
 	padding: 25px;
 	border-bottom: 10px solid black;
 	font-size: 60px;
+    text-transform: uppercase;
 }
 
 p {
@@ -33,13 +34,14 @@ blockquote {
 
 aside {
 	background-color: #3C1D3D;
-	color: #F2FFFC;
+    color: #F2FFFC;
+    padding: 20px;
+    text-align: center;
 }
 
 footer {
-	background-color: #851944;
+	background-color: #000;
 	color: #F2FFFC;
-    text-align: center;
 }
 
 nav a {
@@ -68,6 +70,28 @@ main div {
 aside {
 	text-align: center;
 }
+.icones-sociais li{
+    display: inline-block; 
+}
+
+.icones-sociais a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-indent: -9999;
+}
+
+.github{
+    background-image: url(github.png);
+}
+
+.twitter{
+    background-image: url(twitter.png);
+}
+
+.linkedin{
+    background-image: url(linkedin.png);
+}
 
 aside h1 {
 	font-size: 30px;
@@ -84,4 +108,15 @@ em {
 
 h2 {
 	font-size: 30px;
+}
+article {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.navegacao-site {
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 20px;
+    text-align: center;
 }
