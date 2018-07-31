@@ -54,7 +54,7 @@ main a {
 }
 
 aside a {
-	color: #000;
+	color: #FAFFFC;
 	font-family: "Open Sans Condensed", sans-serif;
 }
 
@@ -134,7 +134,7 @@ aside{
     width: 15%;
     clear: right;
     box-sizing: border-box;
-    top: 230px;
+    top: 310px;
 }
 main{
     float: left;
@@ -159,7 +159,7 @@ footer{
     clear: both;
 }
 .minha-foto{
-    width: 230px;
+    width: 310px;
     position: absolute;
     top 0;
     right: 0;
