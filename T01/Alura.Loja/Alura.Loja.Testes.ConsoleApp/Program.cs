@@ -32,10 +32,10 @@ namespace Alura.Loja.Testes.ConsoleApp
 
                 Console.WriteLine($"Endereço de Entrega: {cliente.EnderecoDeEntrega.Logradouro}");
 
-                var produto = contexto
-                    .Produtos
-                    .Where(p => p.Id == 3002)
-                    .FirstOrDefault();
+               var produto = contexto
+                 .Produtos
+                 .Where(p => p.Id == 3002)
+                 .FirstOrDefault();
 
                 contexto.Entry(produto)
                     .Collection(p => p.Compras)
