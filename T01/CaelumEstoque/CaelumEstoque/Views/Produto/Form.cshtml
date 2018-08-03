@@ -13,8 +13,12 @@
 <body>
     <div> 
         <form action="/Produto/Adiciona" method="post">
+            @Html.ValidationMessage("produto.Invalido")
+
+
             <label for="nome">Nome:</label>
             <input id="nome" name="produto.Nome" />
+            @Html.ValidationMessage("produto.Name")
 
             <label for="preco">Preco:</label>
             <input id="preco" name="produto.Preco" />
