@@ -43,5 +43,10 @@ namespace CaelumEstoque.DAO
                 contexto.SaveChanges();
             }
         }
+
+        internal Produto BuscarPorId(int produtoId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
