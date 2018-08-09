@@ -15,6 +15,6 @@ namespace CaelumEstoque.DAO
 
         public DbSet<Usuario> Usuarios { get; set; }
 
-        
+
     }
 }

@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.ConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET.Inicial", "ASP.NET.Inicial\ASP.NET.Inicial.csproj", "{849F48D9-BE88-4B9A-90CA-5107352663A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaelumEstoque", "CaelumEstoque\CaelumEstoque\CaelumEstoque.csproj", "{45D5DEAF-37CD-467E-9CD6-E3D2D00882A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaelumEstoque", "..\..\desenvolvimento-web-asp-net-mvc-5-aula3\CaelumEstoque-aula3\CaelumEstoque\CaelumEstoque.csproj", "{45D5DEAF-37CD-467E-9CD6-E3D2D00882A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

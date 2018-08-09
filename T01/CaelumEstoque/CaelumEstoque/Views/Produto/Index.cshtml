@@ -1,7 +1,7 @@
 ﻿@model IList<CaelumEstoque.Models.Produto>
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -10,31 +10,23 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/Content/Css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/Css/site.css"/>
 </head>
 <body>
-    <div> 
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Quantidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var produto in Model)
-                {
-                <tr>
-                    <td>@produto.Id</td>
-                <td>
-                    @Html.RouteLink(produto.Nome,"VisualizaProduto", new {id = produto.Id})
-                </td>
-                    <td>@produto.Nome</td>
-                    <td>@produto.Quantidade</td>               
-               </tr>
-                }
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Produtos", "Index", "Produto")</li>
+                <li>@Html.ActionLink("Categorias", "Index", "Categoria")</li>
+                <li>@Html.ActionLink("Usuários", "Index", "Usuario")</li>
+            </ul>
+            <h3 class="text-muted"> Caelum Estoque</h3>
+        </div>
+        <div id="conteudo">
+            <h1>Página Inicial da aplicação</h1>
+        </div>
     </div>
 </body>
 </html>

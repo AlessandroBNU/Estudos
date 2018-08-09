@@ -91,6 +91,7 @@
       <DependentUpon>DBEstoque.mdf</DependentUpon>
     </Content>
     <Content Include="Content\Css\bootstrap.css" />
+    <Content Include="Content\Css\site.css" />
     <Content Include="Global.asax" />
     <None Include="packages.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -107,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="DAO\CategoriasDAO.cs" />
@@ -136,7 +138,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Categoria\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
