@@ -14,16 +14,12 @@
             {
                 <tr>
                     <td>@produto.Id</td>
-                    <td>
-                        @Html.RouteLink(produto.Nome, "VisualizaProduto", new { id = produto.Id})
-                    </td>
-                    <td id="quantidade@(produto.Id)">
-                        @produto.Quantidade
-                    </td>
-                    <td>
-                        <a href="#"onclick="decrementa(@produto.Id);">Decrementar</a>
-                        
-                    </td>
+
+                    <td> @Html.RouteLink(produto.Nome, "VisualizaProduto", new { id = produto.Id})</td>
+
+                    <td id="quantidade@(produto.Id)">@produto.Quantidade</td>
+
+                    <td> <a href="#"onclick="decrementa(@produto.Id);">Decrementar</a> </td>
                 </tr>
             }
         </tbody>
@@ -32,10 +28,12 @@
 <script type="text/javascript">
     function decrementa(produtoId) {
         var url = "@Url.Action("DecrementaQtd", "Produto")";
-        $.post(url, { id: produtoId }, atualiza);
+        var params = { id: produtoId }
+        $.post(url, params, atualiza);
     }
 
     function atualiza(resposta) {
-        $("#quantidade" + resposta.Id).html(resposta.Quantidade);
+        var elemento = $("#quantidade" + resposta.Id);
+        elemento.html(resposta.Quantidade);
     }
 </script>
