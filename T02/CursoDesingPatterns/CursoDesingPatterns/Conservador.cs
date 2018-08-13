@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-   public class ISS : Imposto
+    public class Conservador : IInvestimento
     {
-        public double Calcula(Orcamento orcamento)
+        public double Calcula(Conta conta)
         {
-            return orcamento.Valor * 0.6;
+            return conta.Saldo * 0.008;
         }
     }
 }
