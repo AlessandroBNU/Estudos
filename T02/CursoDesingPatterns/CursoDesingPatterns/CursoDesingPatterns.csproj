@@ -43,10 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrojado.cs" />
-    <Compile Include="CalculadorDeDisconto.cs" />
+    <Compile Include="CalculadorDeDesconto.cs" />
     <Compile Include="CalculadorDeImposto.cs" />
     <Compile Include="Conservador.cs" />
     <Compile Include="Conta.cs" />
+    <Compile Include="IDesconto.cs" />
     <Compile Include="DescontoPorCincoItens.cs" />
     <Compile Include="DescontoPorMaisQuinhentosReais.cs" />
     <Compile Include="ICCC.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RealizadorDeInvestimentos.cs" />
+    <Compile Include="SemDesconto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
