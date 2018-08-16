@@ -10,6 +10,10 @@ namespace CursoDesingPatterns
     {
         public string Titular { get; private set; }
         public double Saldo { get; private set; }
+        public string Numero { get; internal set; }
+        public string Agencia { get; internal set; }
+        public string Nome { get; internal set; }
+
         public void Deposita(double valor)
         {
             this.Saldo += valor;

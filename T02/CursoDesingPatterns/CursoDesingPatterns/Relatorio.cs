@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-    class Relatorio
+    public abstract class Relatorio
     {
+        protected abstract void Cabecalho();
+        protected abstract void Rodape();
+        protected abstract void Corpo(IList<Conta> contas);
+        
+        public void Impride(IList<Conta> contas)
+        {
+            Cabecalho();
+            Corpo(contas);
+            Rodape();
+        }
     }
 }
