@@ -12,5 +12,15 @@ namespace CursoDesingPatterns
         {
             return orcamento.Valor >= 500; 
         }
+
+        public double MaximaTaxacao(Orcamento orcamento)
+        {
+            return orcamento.Valor * 0.7;
+        }
+
+        public double MinimaTaxacao(Orcamento orcamento)
+        {
+            return orcamento.Valor * 0.5;
+        }
     }
 }
