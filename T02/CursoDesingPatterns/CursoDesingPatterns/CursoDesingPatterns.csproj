@@ -49,12 +49,14 @@
     <Compile Include="Conta.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
     <Compile Include="Formato.cs" />
+    <Compile Include="ICPP.cs" />
     <Compile Include="IDesconto.cs" />
     <Compile Include="DescontoPorCincoItens.cs" />
     <Compile Include="DescontoPorMaisQuinhentosReais.cs" />
     <Compile Include="ICCC.cs" />
     <Compile Include="ICMS.cs" />
     <Compile Include="IInvestimento.cs" />
+    <Compile Include="IKCV.cs" />
     <Compile Include="Imposto.cs" />
     <Compile Include="IResposta.cs" />
     <Compile Include="ISS.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="RespostaEmPorcento.cs" />
     <Compile Include="RespostaEmXml.cs" />
     <Compile Include="SemDesconto.cs" />
+    <Compile Include="TemplateDeImpostoCondicional.cs" />
     <Compile Include="TesteCorrente.cs" />
   </ItemGroup>
   <ItemGroup>
