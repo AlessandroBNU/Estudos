@@ -20,7 +20,7 @@ namespace CursoDesingPatterns
         {
             foreach(Conta c in contas)
             {
-                Console.WriteLine(c.Titular + " - " + c.Saldo);
+                Console.WriteLine(c.Nome + " - " + c.Saldo);
             }
         }
     }

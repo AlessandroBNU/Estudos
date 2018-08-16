@@ -68,13 +68,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RealizadorDeInvestimentos.cs" />
     <Compile Include="Relatorio.cs" />
+    <Compile Include="RelatorioComplexo.cs" />
+    <Compile Include="RelatorioSimples.cs" />
     <Compile Include="Requisicao.cs" />
     <Compile Include="RespostaEmCvs.cs" />
     <Compile Include="RespostaEmPorcento.cs" />
     <Compile Include="RespostaEmXml.cs" />
     <Compile Include="SemDesconto.cs" />
     <Compile Include="TemplateDeImpostoCondicional.cs" />
-    <Compile Include="TesteCorrente.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
