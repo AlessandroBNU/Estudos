@@ -48,6 +48,10 @@
     <Compile Include="Conservador.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
+    <Compile Include="Filtro.cs" />
+    <Compile Include="FiltroMaiorQue500MilReais.cs" />
+    <Compile Include="FiltroMenorQue100Reais.cs" />
+    <Compile Include="FiltroMesmoMes.cs" />
     <Compile Include="Formato.cs" />
     <Compile Include="ICPP.cs" />
     <Compile Include="IDesconto.cs" />
@@ -59,6 +63,7 @@
     <Compile Include="IInvestimento.cs" />
     <Compile Include="IKCV.cs" />
     <Compile Include="Imposto.cs" />
+    <Compile Include="ImpostoMuitoAlto.cs" />
     <Compile Include="IResposta.cs" />
     <Compile Include="ISS.cs" />
     <Compile Include="Item.cs" />
@@ -76,6 +81,7 @@
     <Compile Include="RespostaEmXml.cs" />
     <Compile Include="SemDesconto.cs" />
     <Compile Include="TemplateDeImpostoCondicional.cs" />
+    <Compile Include="TesteImposto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

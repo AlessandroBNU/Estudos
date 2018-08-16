@@ -18,12 +18,12 @@ namespace CursoDesingPatterns
         {
             this.OutroImposto = null;
         }
-        public abstract double Calcula(Orcamento orcamento);
 
         protected double CalculoDoOutroImposto(Orcamento orcamento)
         {
-            if (OutroImposto == null) return 0;
-            return OutroImposto.Calcula(orcamento);
+            return (OutroImposto == null? 0 : OutroImposto.Calcula(orcamento));
         }
+
+        public abstract double Calcula(Orcamento orcamento);
     }
 }

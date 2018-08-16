@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-    class ImpostoMuitoAlto
+  public class ImpostoMuitoAlto : Imposto
     {
+        public ImpostoMuitoAlto(Imposto imposto) : base(imposto) { }
+        public ImpostoMuitoAlto() : base() { }
+        public override double Calcula(Orcamento orcamento)
+        {
+            return orcamento.Valor * 0.2 + CalculoDoOutroImposto(orcamento);
+        }
     }
 }
