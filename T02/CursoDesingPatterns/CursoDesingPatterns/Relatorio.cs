@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-   public interface IDesconto
+    class Relatorio
     {
-        double Desconto(Orcamento orcamento);
-        IDesconto Proximo { get; set; }
     }
 }
