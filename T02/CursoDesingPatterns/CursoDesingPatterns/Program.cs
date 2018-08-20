@@ -7,21 +7,38 @@ using System.Threading.Tasks;
 namespace CursoDesingPatterns
 {
    class Program
-    {
-      static void Main(string[] args)
-        {
-            Imposto iss = new ISS(new ICMS());
+   {
+        static void Main(string[] args)
+        {   
+            Orcamento reforma = new Orcamento(500);
 
-            Orcamento orcamento = new Orcamento(500);
+            Console.WriteLine(reforma.Valor);
 
-          double valor = iss.Calcula(orcamento);
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
 
-            Console.WriteLine(valor);
-
+            reforma.aprova();
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+            reforma.Finaliza();
             Console.ReadKey();
+            
         }
-    }
+   }
 }
+
+//   static void Main(string[] args)
+//     {
+//         Imposto iss = new ISS(new ICMS());
+
+//         Orcamento orcamento = new Orcamento(500);
+
+//       double valor = iss.Calcula(orcamento);
+
+//         Console.WriteLine(valor);
+
+//         Console.ReadKey();
+//     }
 
 //static void Main(string[] args)
 // {

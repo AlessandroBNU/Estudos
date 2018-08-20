@@ -42,16 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aprovado.cs" />
     <Compile Include="Arrojado.cs" />
     <Compile Include="CalculadorDeDesconto.cs" />
     <Compile Include="CalculadorDeImposto.cs" />
     <Compile Include="Conservador.cs" />
     <Compile Include="Conta.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
+    <Compile Include="EmAprovacao.cs" />
+    <Compile Include="EstadoDeUmOrcamento.cs" />
     <Compile Include="Filtro.cs" />
     <Compile Include="FiltroMaiorQue500MilReais.cs" />
     <Compile Include="FiltroMenorQue100Reais.cs" />
     <Compile Include="FiltroMesmoMes.cs" />
+    <Compile Include="Finalizado.cs" />
     <Compile Include="Formato.cs" />
     <Compile Include="ICPP.cs" />
     <Compile Include="IDesconto.cs" />
@@ -75,6 +79,7 @@
     <Compile Include="Relatorio.cs" />
     <Compile Include="RelatorioComplexo.cs" />
     <Compile Include="RelatorioSimples.cs" />
+    <Compile Include="Reprovado.cs" />
     <Compile Include="Requisicao.cs" />
     <Compile Include="RespostaEmCvs.cs" />
     <Compile Include="RespostaEmPorcento.cs" />
