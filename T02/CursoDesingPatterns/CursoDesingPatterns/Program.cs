@@ -9,53 +9,23 @@ namespace CursoDesingPatterns
    class Program
    {
         static void Main(string[] args)
-        {   
-            Orcamento reforma = new Orcamento(500);
+        { 
+        CriadorDeNotaFiscal criador = new CriadorDeNotaFiscal();
+        criador.ParaEmpresa("Caelum Ensino e Inovacao");
+        criador.ComCnpj("23.456.789/0001-12");
 
-            Console.WriteLine(reforma.Valor);
+            criador.ComItem(new ItemDaNota("item 1", 100.0));
+            criador.ComItem(new ItemDaNota("item 2", 200.0));
+            criador.NaDataAtual();
+            criador.ComObservacoes("uma obs qualquer");
 
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
+            NotaFiscal nf = criador.Constroi();
 
-            reforma.aprova();
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-            reforma.Finaliza();
+            Console.WriteLine(nf.ValorBruto);
+            Console.WriteLine(nf.Impostos);
+
             Console.ReadKey();
-            
         }
-   }
+    }
 }
 
-//   static void Main(string[] args)
-//     {
-//         Imposto iss = new ISS(new ICMS());
-
-//         Orcamento orcamento = new Orcamento(500);
-
-//       double valor = iss.Calcula(orcamento);
-
-//         Console.WriteLine(valor);
-
-//         Console.ReadKey();
-//     }
-
-//static void Main(string[] args)
-// {
-//     CalculadorDeDesconto calculador = new CalculadorDeDesconto();
-
-//     Orcamento orcamento = new Orcamento(500);
-//     orcamento.AdicionaItem(new Item("CANETA", 250));
-//     orcamento.AdicionaItem(new Item("LAPIS", 250));
-//     orcamento.AdicionaItem(new Item("CADERNO", 250));
-//     orcamento.AdicionaItem(new Item("MOCHILA", 250));
-//     orcamento.AdicionaItem(new Item("PENAL", 250));
-//     orcamento.AdicionaItem(new Item("XBOX", 250));
-
-//     double desconto = calculador.Calcula(orcamento);
-//     Console.WriteLine(desconto);
-
-//     Console.ReadKey();
-
-
-// }
