@@ -27,7 +27,7 @@ namespace ConsoleApp1
             c.Avanca();
             historico.Adiciona(c.SalvaEstado());
 
-            Console.WriteLine(c.Tipo);
+            Console.WriteLine(historico.Pega(2).Contrato.Tipo);
         }
     }
 }
