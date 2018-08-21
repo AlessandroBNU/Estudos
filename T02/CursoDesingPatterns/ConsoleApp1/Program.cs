@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1.Cap1;
 using ConsoleApp1.Cap2;
 using ConsoleApp1.Cap3;
+using ConsoleApp1.Cap4;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,19 +16,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Historico historico = new Historico();
+            IExpressao esquerda = new Soma(new Soma(new Numero(1), new Numero(100)), new Numero(10));
+            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            IExpressao soma = new Soma(esquerda, direita);
 
-            Contrato c = new Contrato(DateTime.Now,"Victor", TipoContrato.Novo);
-            historico.Adiciona(c.SalvaEstado());
-           
-
-            c.Avanca();
-            historico.Adiciona(c.SalvaEstado());
-
-            c.Avanca();
-            historico.Adiciona(c.SalvaEstado());
-
-            Console.WriteLine(historico.Pega(2).Contrato.Tipo);
+            Console.WriteLine(soma.Avalia());
         }
     }
 }
