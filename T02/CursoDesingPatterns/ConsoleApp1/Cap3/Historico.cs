@@ -17,5 +17,9 @@ namespace ConsoleApp1.Cap3
         {
             return Estados[indice];
         }
+        public void Adiciono(Estado estado)
+        {
+            Estados.Add(estado);
+        }
     }
 }
