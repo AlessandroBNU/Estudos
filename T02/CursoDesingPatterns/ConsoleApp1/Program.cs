@@ -1,5 +1,6 @@
 ﻿using ConsoleApp1.Cap1;
 using ConsoleApp1.Cap2;
+using ConsoleApp1.Cap3;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,39 +15,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            NotasMusicais notas = new NotasMusicais();
-            IList<INota> musica = new List<INota>()
-           {
-               notas.Pega("do"),
-               notas.Pega("re"),
-               notas.Pega("mi"),
-               notas.Pega("fa"),
-               notas.Pega("fa"),
-               notas.Pega("fa"),
+            Historico historico = new Historico();
 
-                notas.Pega("do"),
-               notas.Pega("re"),
-               notas.Pega("do"),
-               notas.Pega("re"),
-               notas.Pega("re"),
-               notas.Pega("re"),
+            Contrato c = new Contrato(DateTime.Now,"Victor", TipoContrato.Novo);
+            historico.Adiciona(c.SalvaEstado());
+           
 
-                notas.Pega("do"),
-               notas.Pega("sol"),
-               notas.Pega("fa"),
-               notas.Pega("mi"),
-               notas.Pega("mi"),
-               notas.Pega("mi"),
+            c.Avanca();
+            historico.Adiciona(c.SalvaEstado());
 
-                notas.Pega("do"),
-               notas.Pega("re"),
-               notas.Pega("mi"),
-               notas.Pega("fa"),
-               notas.Pega("fa"),
-               notas.Pega("fa")
-            };
-            Piano piano = new Piano();
-            piano.Toca(musica);
+            c.Avanca();
+            historico.Adiciona(c.SalvaEstado());
+
+            Console.WriteLine(c.Tipo);
         }
     }
 }
