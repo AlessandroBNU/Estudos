@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoDesingPatterns", "CursoDesingPatterns\CursoDesingPatterns.csproj", "{1722E4F7-F0F1-46C2-8B6C-AB493845935E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoDesingPatterns2", "CursoDesingPatterns2\CursoDesingPatterns2.csproj", "{EA8A9213-E3EF-4190-B7F5-E1F09223AF22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1722E4F7-F0F1-46C2-8B6C-AB493845935E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1722E4F7-F0F1-46C2-8B6C-AB493845935E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1722E4F7-F0F1-46C2-8B6C-AB493845935E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8A9213-E3EF-4190-B7F5-E1F09223AF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8A9213-E3EF-4190-B7F5-E1F09223AF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8A9213-E3EF-4190-B7F5-E1F09223AF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8A9213-E3EF-4190-B7F5-E1F09223AF22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

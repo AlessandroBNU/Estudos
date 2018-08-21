@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-   class Program
-   {
+    class Program
+    {
         static void Main(string[] args)
-        { 
-        CriadorDeNotaFiscal criador = new CriadorDeNotaFiscal();
-        criador.ParaEmpresa("Caelum Ensino e Inovacao");
-        criador.ComCnpj("23.456.789/0001-12");
+        {
+            CriadorDeNotaFiscal criador = new CriadorDeNotaFiscal();
 
-            criador.ComItem(new ItemDaNota("item 1", 100.0));
-            criador.ComItem(new ItemDaNota("item 2", 200.0));
-            criador.NaDataAtual();
-            criador.ComObservacoes("uma obs qualquer");
+            criador.ParaEmpresa("Caelum Ensino e Inovacao");
+            criador.ComCnpj("23.456.789/0001-12");
+            criador.ComItem(new ItemDaNotaBuilder("item 1", 100.0));
+            criador.ComItem(new ItemDaNotaBuilder("item 2", 200.0));
+            criador.NaData();
+            criador.ComObservacoes("uma obs qualquer"); 
 
             NotaFiscal nf = criador.Constroi();
 
@@ -25,6 +25,8 @@ namespace CursoDesingPatterns
             Console.WriteLine(nf.Impostos);
 
             Console.ReadKey();
+
+            
         }
     }
 }

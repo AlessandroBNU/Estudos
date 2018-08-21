@@ -9,37 +9,36 @@ namespace CursoDesingPatterns
         public string Cnpj { get; private set; }
         public string Observacoes { get; private set; }
         public DateTime Data { get; private set; }
-        
-        public NotaFiscal Constroi()
-        {
-            return new NotaFiscal(RazaoSocial, Cnpj, Data, valorTotal, impostos, todosItens, Observacoes);
-        }
-
         private double valorTotal;
         private double impostos;
         private IList<ItemDaNota> todosItens = new List<ItemDaNota>();
 
-        public void ParaEmpresa(string razaoSocial)
+        public CriadorDeNotaFiscal ParaEmpresa(string razaoSocial)
         {
             this.RazaoSocial = razaoSocial;
+            return this;
         }
-        public void ComObservacoes(string observacoes)
+        public CriadorDeNotaFiscal ComObservacoes(string observacoes)
         {
             this.Observacoes = observacoes;
+            return this;
         }
-        public void NaDataAtual()
+        public CriadorDeNotaFiscal NaDataAtual()
         {
             this.Data = DateTime.Now;
+            return this;
         }
-        public void ComCnpj(string cnpj)
+        public CriadorDeNotaFiscal ComCnpj(string cnpj)
         {
             this.Cnpj = cnpj;
+            return this;
         }
-        public void ComItem(ItemDaNota item)
+        public CriadorDeNotaFiscal ComItem(ItemDaNota item)
         {
             todosItens.Add(item);
             valorTotal += item.Valor;
             impostos += item.Valor * 0.05;
+            return this;
         }
     }
 }

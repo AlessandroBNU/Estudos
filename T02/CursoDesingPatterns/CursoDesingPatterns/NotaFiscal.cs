@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-    public class NotaFiscal
+    public class NotaFiscal 
     {
+        private string v;
+        private DateTime now;
+
         public string RazaoSocial { get; set; }
         public string Cnpj { get; set; }
         public DateTime DataDeEmissao { get; set; }
         public double ValorBruto { get; set; }
         public double Impostos { get; set; }
-        public IList<ItemDaNota> Itens { get; set; }
+        public IList<ItemDaNotaBuilder> Itens { get; set; }
         public string Observacoes { get; set; }
 
         public NotaFiscal(String razaoSocial, string cnpj, DateTime dataDeEmissao,
-            double valorBruto, double impostos, IList<ItemDaNota> itens,
+            double valorBruto, double impostos, IList<ItemDaNotaBuilder> itens,
             string observacoes)
         {
             this.RazaoSocial = razaoSocial;
@@ -27,8 +30,9 @@ namespace CursoDesingPatterns
             this.Impostos = Impostos;
             this.Itens = itens;
             this.Observacoes = observacoes;
-
-
-        }
+        }    
     }
+
+   
 }
+
