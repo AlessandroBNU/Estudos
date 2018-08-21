@@ -11,7 +11,7 @@ namespace CursoDesingPatterns
         public DateTime Data { get; private set; }
         private double valorTotal;
         private double impostos;
-        private IList<ItemDaNota> todosItens = new List<ItemDaNota>();
+        //private IList<ItemDaNota> todosItens = new List<ItemDaNota>();
 
         public CriadorDeNotaFiscal ParaEmpresa(string razaoSocial)
         {
@@ -33,12 +33,12 @@ namespace CursoDesingPatterns
             this.Cnpj = cnpj;
             return this;
         }
-        public CriadorDeNotaFiscal ComItem(ItemDaNota item)
-        {
-            todosItens.Add(item);
-            valorTotal += item.Valor;
-            impostos += item.Valor * 0.05;
-            return this;
-        }
+        //public CriadorDeNotaFiscal ComItem(ItemDaNota item)
+        //{
+        //    todosItens.Add(item);
+        //    valorTotal += item.Valor;
+        //    impostos += item.Valor * 0.05;
+        //    return this;
+        //}
     }
 }
